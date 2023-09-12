@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pure Javascript.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link rel="icon" type="image/x-icon" href="images/pickpackboom2.png">
+    <title>js-formvalidation</title>
+   
+<script defer src="assets/vendors.ca0d79dcabce8654cb06.js"></script><script defer src="assets/main.2de7892edb33a3c83896.js"></script></head>
+<body>
+
+    <center>
+    <div class="centered-logo">
+        <header>
+            <img src="/images/js form backgroundimage.jpg" alt="Your Logo">
+        </header>
+    </div>
+    
+    <div class="form">
+        <h1>Enter your Credentials</h1>
+           <form action="" class="login_form" method="get" name="form" onsubmit="return validated()">
+            <table>
+        
+         
+            <label for="firstname" class="font">First Name</label>
+            <input autocomplete="off" type="firstname"  id="firstname" name="firstname" class="input_box" >
+             <br>
+            
+             <label for="lastname" class="font">Last Name</label>
+            <input autocomplete="off" type="lastname"  id="lastname" name="lastname" class="input_box" >
+            </tr>
+              
+            <br>
+
+            <label for="email" class="font">Email</label>
+            <input autocomplete="off" type="email" id="email" name="email" class="input_box" placeholder="Enter your Email Address here!">
+            <br>
+
+            <div id="errEmail"></div>
+
+       
+            <label for="password" class="font">Password</label>
+            <input  type="password"  id="password" name="password" class="input_box" placeholder="Enter your password here!" >
+            <br>   
+            
+            <div id="errPassword"></div>
+
+            <label for="password" class="font">Confirm Password</label>
+            <input type="password" id="confirm" name="confirm" class="input_box" placeholder="Please Re-enter your Password!" >
+            
+            <div id="errFinal"></div>
+
+            <button type="submit" class="push"><h1>Push the Button</h1></button>
+     
+              
+           </form> 
+       
+        
+        </div>
+    </center>
+   <script src="index.js"></script>
+</body>
+</html>
+
