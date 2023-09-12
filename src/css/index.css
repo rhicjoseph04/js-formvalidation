@@ -7,7 +7,7 @@
 
 body {
     background-color: radial-gradient(circle at center, rgba(227, 30, 30, 0.638) 0%, rgba(0, 0, 0, 0.3) 100%);
-    height: 100vh;
+    height: 100%;
     background-image: url(../images/pickpackboombackgroound.png);
     background-position: center;
     background-size: cover;
@@ -52,6 +52,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     justify-content: center;
     font-family: 'Comic Sans MS', sans-serif;
+
 
 }
 
