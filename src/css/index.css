@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: radial-gradient(circle at center, rgba(227, 30, 30, 0.638) 0%, rgba(0, 0, 0, 0.3) 100%);
+    height: 100vh;
+    background-image: url(../images/pickpackboombackgroound.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:0;
+   
+    
+}
+  
+.centered-logo {
+    text-align: center;
+    margin-bottom: 20px; 
+    opacity: 0.7;
+    position: relative; 
+    color: transparent;
+    
+}
+
+.centered-logo img {
+    max-width: 100%;
+    height:20vh;
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.centered-logo:hover img {
+    transform: scale(1.1); 
+    opacity: 1; 
+    filter: grayscale(0%); 
+    box-shadow: 0 0 20px rgba(180, 6, 6, 0.819); 
+}
+
+.form {
+    background-color: transparent;
+    border: 1px solid rgba(23, 7, 80, 0.942);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    margin: 50px auto;
+    backdrop-filter: blur(6px);
+    text-align:center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    font-family: 'Comic Sans MS', sans-serif;
+
+}
+
+.form h1 {
+color:#b15736;
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+        width: 100%; 
+        margin: 20px auto;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .form {
+        padding: 10px; 
+    }
+}
+
+
+.font {
+    display: block;
+    font-size: 15pt;
+    margin-bottom: 5px;
+    
+    color: rgb(197, 197, 84);
+    font-weight: bold;
+}
+
+
+
+.form input[type="text"],
+.form input[type="password"] {
+    width: 75%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #4400ff; 
+    border: 1px solid rgba(23, 7, 80, 0.942);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.input_box{
+    width: 75%;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+   
+}
+
+
+#email_error{
+    font-size: 8pt;
+    color: rgba(60, 10, 10, 0.902);
+    font-weight: bold;
+    
+}
+
+#pass_error{
+    font-size: 8pt;
+    color: rgba(86, 7, 7, 0.902);
+    font-weight: bold;
+    
+}
+
+.push{
+   font-size: 10pt;
+   border: none;
+   border-radius: 10px;
+   width: 250px;
+   height: 40px;
+   font-family:'Comic Sans MS', sans-serif;
+   justify-content: center;
+   display: inline-block;
+   border-radius:50px;
+   
+}
+
+.push:hover{
+    background-color: rgba(172, 169, 1, 0.979);
+    transition: 0.5s ease;
+ 
+}
+
