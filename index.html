@@ -8,28 +8,39 @@
     <link rel="icon" type="image/x-icon" href="images/pickpackboom2.png">
     <title>js-formvalidation</title>
    
-<script defer src="assets/vendors.ca0d79dcabce8654cb06.js"></script><script defer src="assets/main.34f9649f86be945d51fa.js"></script></head>
+<script defer src="assets/vendors.0ec95a3d3ec519831f2d.js"></script><script defer src="assets/main.20b821fc2910bd9ccf97.js"></script></head>
 <body>
 
     <center>
-    <div class="centered-logo">
-        <header>
-            <img src="https://th.bing.com/th/id/OIP.e9gwpwwfNsg0WgQ_UsNACwHaC0?pid=ImgDet&rs=1" alt="Your Logo">
-        </header>
-    </div>
-    
+        <div class="centered-logo">
+            <header>
+       <img src="../images/maxresdefault.jpg" alt="">
+        <br>
+        <br>
+                <h1>
+                    <span class="word" id="pick">Pick</span>
+                    <span class="word" id="pack">Pack</span>
+                    <span class="word" id="boom">Boom</span>
+                </h1>
+            </header>
+        </div>
+        <br>
+        <br>
+        <br>
     <div class="form">
+        
+
         <h1>Enter your Credentials</h1>
            <form action="" class="login_form" method="get" name="form" onsubmit="return validated()">
             <table>
         
          
             <label for="firstname" class="font">First Name</label>
-            <input autocomplete="off" type="firstname"  id="firstname" name="firstname" class="input_box" >
+            <input autocomplete="off" type="firstname"  id="firstname" name="firstname" class="input_box" placeholder="Please enter your firstname!" >
              <br>
             
              <label for="lastname" class="font">Last Name</label>
-            <input autocomplete="off" type="lastname"  id="lastname" name="lastname" class="input_box" >
+            <input autocomplete="off" type="lastname"  id="lastname" name="lastname" class="input_box" placeholder="Please enter your lastname!"03 >
             </tr>
               
             <br>
@@ -48,16 +59,14 @@
             <div id="errPassword"></div>
 
             <label for="password" class="font">Confirm Password</label>
-            <input type="password" id="confirm" name="confirm" class="input_box" placeholder="Please Re-enter your Password!" >
+            <input type="password" id="confirm" name="confirm" class="input_box" placeholder="Please Confirm your Password!" >
             
             <div id="errFinal"></div>
 
-            <button type="submit" class="push"><h1>Push the Button</h1></button>
-     
-              
+            <button type="click" class="click"><h1>Click the Button</h1></button>
+             <br>
            </form> 
-       
-        
+           <br>
         </div>
     </center>
    <script src="index.js"></script>
