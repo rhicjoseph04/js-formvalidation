@@ -94,18 +94,24 @@ body {
     max-width: 500px;
     padding: 20px;
     margin: 50px auto;
-    backdrop-filter: blur(10px);
     text-align:center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     justify-content: center;
     font-family: 'Comic Sans MS', sans-serif;
     box-shadow: 0 0 20px rgba(11, 23, 64, 0.934); 
     background-size: cover;
     background-repeat: no-repeat;
-    margin-left:20px;
-    margin-right:20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* Add relative positioning */
+    box-shadow: 0 10px 20px rgba(11, 23, 64, 0.3); /* Make the shadow more subtle */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add a transition for hover effect */
 
 
+}
+
+.form:hover {
+    transform: translateY(-5px); /* Add vertical translation on hover to create a floating effect */
+    box-shadow: 0 20px 30px rgba(11, 23, 64, 0.5); /* Increase the shadow on hover */
 }
 
 .form h1 {
