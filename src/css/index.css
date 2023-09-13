@@ -102,16 +102,16 @@ body {
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
-    position: relative; /* Add relative positioning */
-    box-shadow: 0 10px 20px rgba(11, 23, 64, 0.3); /* Make the shadow more subtle */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add a transition for hover effect */
+    position: relative; 
+    box-shadow: 0 10px 20px rgba(11, 23, 64, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 
 
 }
 
 .form:hover {
-    transform: translateY(-5px); /* Add vertical translation on hover to create a floating effect */
-    box-shadow: 0 20px 30px rgba(11, 23, 64, 0.5); /* Increase the shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 20px 30px rgba(11, 23, 64, 0.5); 
 }
 
 .form h1 {
@@ -206,7 +206,6 @@ body {
     transition: opacity 0.3s ease; 
     
 }
-
 
 .click:hover{
     background-color: rgba(73, 197, 222, 0.95);
