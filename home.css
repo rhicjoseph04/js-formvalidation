@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, rgba(212, 18, 18, 0.928), rgba(32, 8, 75, 0.928));
+
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Comic Neue', cursive;
+  color: white; /* Text color */
+}
+
+.centered-logo h1 {
+  font-size: 36px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  position: relative;
+ 
+}
+
+.centered-logo {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0.9;
+ width:100%;
+
+  
+}
+
+.centered-logo img {
+  max-width: 100%;
+  height: 20vh;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.7s ease;
+  opacity: 0.7;
+}
+
+.centered-logo:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+  filter: grayscale(0%);
+  box-shadow: 0 0 20px rgba(100, 14, 8, 0.9);
+}
+
+.word {
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.word:hover {  font-family: 'Bangers', cursive;
+  transform: scale(1.2);
+}
+
+#pick { color: #d82926; }
+#pack { color: #dee776; }
+#boom { color: #3348cd; }
+
+h1 {
+  color: #ffffff; /* Heading color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* Style for the modal content */
+
+
+.modal-content {
+  background: radial-gradient(circle, rgba(212, 18, 18, 0.928), rgba(32, 8, 75, 0.928));
+  color: white;
+}
+
+.modal-body {
+  font-family: 'Comic Neue', cursive;
+  font-size: 18px;
+}
+
+.modal-title {
+  font-family: 'Bangers', cursive;
+}
+
+.modal-footer {
+  background: radial-gradient(circle, rgba(212, 18, 18, 0.928), rgba(32, 8, 75, 0.928));
+}
+
+.modal-footer button {
+  color: white;
+}
+
+.modal-footer button:hover {
+  background: white;
+  color: #212529;
+}
+
+/*End of Modal*/
+
+ 
+/* Style for the button */
+.options3 {
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.831);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: radial-gradient(circle, rgba(212, 18, 18, 0.928), rgba(32, 8, 75, 0.928));
+}
+
+/* Hover effect */
+.options3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgb(236, 237, 241);
+}
+
+/* Hover effect for the inner content */
+.options3:hover .options {
+  transform: scale(1.2);
+}
+
+
+/* Added hover effect for images inside buttons */
+button img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Adjusted spacing between game buttons */
+.options3 {
+  transition: transform 0.2s;
+  border: 3px solid;
+  border-radius: 50px;
+  box-shadow: 0px 3px 5px;
+  margin: 5px;
+}
+
+.container{
+  margin-bottom:0px;
+  padding-top:10px;
+ 
+ 
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+}
+.game-section {
+  background: radial-gradient(circle, rgba(255, 255, 204, 0.9), rgba(255, 235, 59, 0.5));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.831);
+}
+
+
+#scoreboard-container {
+  background: radial-gradient(circle, rgba(255, 255, 204, 0.9), rgba(255, 235, 59, 0.5));
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.831);
+  color:black;
+}
+
+.section-title {
+  font-family: 'Bangers', cursive; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.score-title {
+  font-family: 'Press Start 2P', cursive; /* Use the gaming font you desire */
+  color:white; /* Replace with your desired color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.score-player-label {
+  color: #2755b0; /* Adjust color as needed */
+}
+
+
+
+/* Adjusted match history styles */
+#match-history-container {
+  background: radial-gradient(circle, rgba(255, 255, 204, 0.9), rgba(255, 235, 59, 0.5));
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.831);
+  color:black;
+}
+
+.section-title {
+  font-family: 'Bangers', cursive;
+  color: black; /* Replace with your desired color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+background-color:  radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+}
+
+.scoreboard {
+  border-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* Rest of your existing styles for the match history section */
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top:10px;
+ margin-bottom:10px;
+ padding-top:5px;
+ 
+}
+
+.button-container button {
+  width: 50px; /* Adjust the width based on the icon */
+  height: 50px; /* Adjust the height based on the icon */
+  background: radial-gradient(circle, rgba(212, 18, 18, 0.928), rgba(32, 8, 75, 0.928));
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button-container button img {
+  height: 50px;
+  width: 50px;
+}
+
+.button-container button:hover {
+  transform: scale(1.1);
+}
+
+.button-container button:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  color: black;
+}
+
+
+
+
+#playAgain {
+  display: none; /* Initially hide the button */
+ 
+}
+
+/* Center the button */
+.d-flex.mx-auto {
+  justify-content: center;
+}
+
+.animate__animated.animate__bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-30px);
+  }
+  60% {
+      transform: translateY(-15px);
+  }
+}
+
+/* Adjusted footer styles */
+
+
+.footer {
+  background: radial-gradient(circle, rgba(100, 0, 100, 0.5), rgba(0, 0, 0, -0.5)); 
+  padding: 20px 0;
+  text-align: center;
+ max-width:100%;
+  justify-content: center;
+ margin-bottom: 0;
+}
+
+/* Adjusted footer text */
+.footer-text {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: white; /* Adjusted text color */
+}
+
+.footer-text a {
+  color: #2980b9; /* Adjusted link color */
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}

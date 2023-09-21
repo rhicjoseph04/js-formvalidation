@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pure Javascript.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link rel="icon" type="image" href="/images/rock-paper-scissors.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <title>PickPackBoom</title>
+</head>
+
+<body>
+
+    <div class="container" id="header-container" style="max-width: 1300px; margin: 0 auto;  background: radial-gradient(circle, rgba(100, 0, 100, 0.5), rgba(0, 0, 0, -0.5));">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="centered-logo">
+                    <header>
+                        <img src="/images/maxresdefault.jpg" alt="logo" class="img-fluid">
+                        <h1>
+                            <span class="word" id="pick">Pick</span>
+                            <span class="word" id="pack">Pack</span>
+                            <span class="word" id="boom">Boom</span>
+                        </h1>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <center>
+            <h1>Rock Paper Scissors Game</h1>
+
+            <!-- Modal for Game Instructions -->
+            <div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog"
+                aria-labelledby="instructionsModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="instructionsModalLabel">Game Instructions</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="accordion" id="instructionsAccordion">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#instructionsContent" aria-expanded="true"
+                                    aria-controls="instructionsContent">
+                                    Show Instructions
+                                </button>
+                                <div id="instructionsContent" class="collapse show" aria-labelledby="instructionsAccordion"
+                                    data-bs-parent="#instructionsAccordion">
+                                    <div class="card-body">
+                                        <p>Welcome to the Rock Paper Scissors game! The objective is to be the first
+                                            player to win 3 games.</p>
+                                        <p>Click on the buttons for Rock, Paper, or Scissors to make your move. The
+                                            computer will make its choice as well.</p>
+                                        <p>Here are the rules:</p>
+                                        <ul>
+                                            <li>Rock beats Scissors.</li>
+                                            <li>Scissors beats Paper.</li>
+                                            <li>Paper beats Rock.</li>
+                                        </ul>
+                                        <p>After each round, the result will be displayed. If you win a round, you'll
+                                            score a point. The first player to reach 3 points wins the game!</p>
+                                        <p>Click "Reset Button" to restart the game and try to beat the computer.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: radial-gradient(circle, rgba(212, 18, 18, 0.928), rgba(32, 8, 75, 0.928));">
+                                Close
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="muteButton" class="options2 btn mx-3 my-1" style="width: 100px; background-color: #b61d1db4;">
+                    <img src="/images/mute.png" alt="Mute Icon ">
+                </button>
+                <button id="resetGameButton" class="options2 btn mx-3 my-1" style="width: 100px; background-color: #b61d1db4;">
+                    <img src="/images/reset.png" style="height: 50px; width: 50px;">
+                </button>
+            </div>
+ 
+            
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+                Open Instructions
+            </button>
+           
+           
+            <br><br><br>
+
+            <!-- Game Options -->
+            <div class="container game-section">
+                <div class="row justify-content-center">
+                    <button class="options3 btn mx-3 my-1" id="rock" style="width: 100px;">
+                        <img class="options" id="rock" src="./images/rock.png" style="height: 50px; width: 50px;">
+                        <p class="d-inline-flex m-2"></p>
+                    </button>
+            
+                    <button class="options3 btn mx-3 my-1" id="paper" style="width: 100px;">
+                        <img class="options" id="paper" src="./images/paper.png" style="height: 50px; width: 50px;">
+                        <p class="d-inline-flex m-2"></p>
+                    </button>
+            
+                    <button class="options3 btn mx-3 my-1" id="scissors" style="width: 100px;">
+                        <img class="options" id="scissors" src="./images/scissors.png" style="height: 50px; width: 50px;">
+                        <p class="d-inline-flex m-2"></p>
+                    </button>
+                </div><br><br><br>
+            
+                <div class="row justify-content-center" style="margin-top: -40px;">
+                    <div id="compChoice" class="col-md-5 text-center img-fluid me-2" style="height: 250px; width: 250px;">
+                        <img src="/images/rock.png" alt="Computer's Choice" class="player img-fluid" />
+                    </div>
+                    
+                    <div id="userChoice" class="col-md-7 text-center img-fluid me-2" style="height: 250px; width: 250px;">
+                        <img src="/images/scissors.png" alt="User's Choice" class="player img-fluid" />
+                    </div>
+            
+                    <div class="col-md-12 text-center">
+                        <h1 id="result" class="result-text"></h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scoreboard -->
+            <div class="container" id="scoreboard-container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="scoreboard container text-center">
+                            <h2 class="section-title">Scoreboard</h2>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <h4 class="score-title">
+                                    <span>
+                                        <img src="images/laptopicon.webp" alt="Computer Icon" width="100" height="100">
+                                        <span class="score-player-label">VS</span>
+                                        <img src="/images/usericon.webp" alt="Player Icon" width="100" height="100">
+                                    </span>
+                                </h4>
+                            </div>
+                            <div class="text-center">
+                                <h1><span id="c-score">0 </span> - <span id="p-score"> 0 </span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Match History -->
+            <div class="container" id="match-history-container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="scoreboard container text-center">
+                            <div>
+                                <h2 class="section-title">Match History</h2>
+                                <div class="row">
+                                    <div class="col">
+                                        <h4>Computer</h4>
+                                        <hr>
+                                        <div id="comp-list" class=""></div>
+                                    </div>
+                                    <div class="col">
+                                        <h4>Player</h4>
+                                        <hr>
+                                        <div id="player-list" class=""></div>
+                                    </div>
+                                    <div class="col">
+                                        <h4>Result</h4>
+                                        <hr>
+                                        <div id="match-list" class="mb-5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Audio Controls -->
+            <audio id="bgMusic" autoplay loop>
+                <source src="/images/Komiku_-_13_-_Good_Fellow(chosic.com) (2).mp3" type="audio/mpeg">
+            </audio>
+
+            <audio id="gameOverSound">
+                <source src="/images/mixkit-game-level-completed-2059.wav" type="audio/mpeg">
+            </audio>
+
+            <!-- Buttons -->
+         
+            </center>
+        
+
+           
+
+
+        <!-- FOOTER -->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="footer-text">Rock Paper Scissors Game</p>
+                        <p class="footer-text">&copy; 2023 PickPackBoom. All rights reserved.</p>
+                        <p class="footer-text">Designed with &#10084; by Arjhay100</p>
+                        <p class="footer-text">Contact: BatongBakal@dimatibagtibag.com</p>
+                        <p class="footer-text">Follow us on <a href="https://twitter.com/yourtwitter" target="_blank">Twitter</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   
+    <script src="home.js"></script>
+</body>
+
+</html>

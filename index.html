@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pure Javascript.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link rel="icon" type="image" href="/images/rock-paper-scissors.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>PickPackBoom</title>
+   
+</head>
+
+<body>
+
+  <div class="container" id="header-container" style="max-width: 1300px; margin: 0 auto;  background: radial-gradient(circle, rgba(100, 0, 100, 0.5), rgba(0, 0, 0, -0.5));">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="centered-logo">
+                <header>
+                    <img src="/images/maxresdefault.jpg" alt="logo" class="img-fluid">
+                    <h1>
+                        <span class="word" id="pick">Pick</span>
+                      
+                        <span class="word" id="pack">Pack</span>
+                        <span class="word" id="boom">Boom</span>
+                    </h1>
+                </header>
+            </div>
+        </div>
+    </div>
+</div>
+      
+     <center>
+      <form action="home.html" class="form-container" method="get" name="form" onsubmit="return validated()">
+      <form name="form"  class="form-container">
+             
+            <h1>Enter your Credentials</h1>
+      
+            <label for="firstname" class="font">First Name</label>
+            <input autocomplete="off" type="text" id="firstname" name="firstname" class="input_box" placeholder="Please enter your firstname!">
+            <br>
+      
+            <label for="lastname" class="font">Last Name</label>
+            <input autocomplete="off" type="text" id="lastname" name="lastname" class="input_box" placeholder="Please enter your lastname!">
+            <br>
+      
+            <label for="email" class="font">Email</label>
+            <input autocomplete="off" type="email" id="email" name="email" class="input_box" placeholder="Enter your Email Address here!">
+            <br>
+            <div id="errEmail"></div>
+      
+            <label for="password" class="font">Password</label>
+            <input type="password" id="password" name="password" class="input_box" placeholder="Enter atleast 10 characters">
+            <br>
+            <div id="errPassword"></div>
+      
+            <label for="confirm" class="font">Confirm Password</label>
+            <input type="password" id="confirm" name="confirm" class="input_box" placeholder="Please Confirm your Password!">
+            <br>
+            <div id="errFinal"></div>
+      
+            <button type="submit" class="click">
+              <div>Click the Button</div>
+            </button>
+            <br>
+          </form>
+          
+        </center>
+
+                <!-- FOOTER -->
+                <footer class="footer text-center">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <p class="footer-text">Rock Paper Scissors Game</p>
+                              <p class="footer-text">&copy; 2023 PickPackBoom. All rights reserved.</p>
+                              <p class="footer-text">Designed with &#10084; by Arjhay100</p>
+                              <p class="footer-text">Contact: BatongBakal@dimatibagtibag.com</p>
+                              <p class="footer-text">Follow us on <a href="https://twitter.com/yourtwitter" target="_blank">Twitter</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </footer>
+          </div>
+
+   <script src="index.js"></script>
+</body>
+</html>
